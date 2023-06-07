@@ -1,7 +1,8 @@
 import { createContext, useContext, useState } from 'react';
+// import Thermometer from '../components/Thermometer';
 
 export const ClimateContext = createContext();
-export const useClimate = useContext(ClimateContext);
+export const useClimate = () => useContext(ClimateContext);
 
 const ClimateProvider = ({children}) => {
     const [temp, setTemp] = useState(50);
