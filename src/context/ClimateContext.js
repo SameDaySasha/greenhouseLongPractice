@@ -6,8 +6,9 @@ export const useClimate = () => useContext(ClimateContext);
 
 const ClimateProvider = ({children}) => {
     const [temp, setTemp] = useState(50);
+    const [hum, setHum] = useState(40);
     return <ClimateContext.Provider
-    value={{ temp, setTemp}}>
+    value={{ temp, setTemp, hum, setHum}}>
         {children}
     </ClimateContext.Provider>
 }
